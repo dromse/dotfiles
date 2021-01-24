@@ -1,0 +1,9 @@
+set relativenumber
+set number
+
+
+
+
+
+
+

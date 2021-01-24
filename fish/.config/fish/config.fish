@@ -1,0 +1,17 @@
+set fish_greeting
+
+alias install "sudo pacman -S"
+alias update "sudo pacman -Syu"
+alias config_fish "nvim ~/.config/fish/config.fish"
+alias remove "sudo pacman -R"
+alias config_qtile "nvim ~/.config/qtile/config.py"
+alias config_nvim "nvim ~/.config/nvim/init.vim"
+alias v "nvim"
+alias suv "sudo nvim"
+alias r "ranger"
+alias cpumax "sudo cpupower frequency-set --max"
+alias cpumin "sudo cpupower frequency-set --min"
+alias cpuinfo "cpupower frequency-info"
+alias config_alacritty "nvim ~/.config/alacritty/alacritty.yml"
+alias configs "cd ~/.config"
+alias config_picom "nvim ~/.config/picom/picom.conf"
