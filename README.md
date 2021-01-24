@@ -2,8 +2,8 @@
 
 ### Here are configs:
 
-1. alacritty (terminal)
-1. fish      (shell)
-1. nvim      (editor)
-1. picom     (compositor)
-1. qtile     (window manager)
+1. [alacritty](/alacritty) (terminal)
+1. [fish](/fish) (shell)
+1. [nvim](/nvim) (editor)
+1. [picom](/picom) (window compositor)
+1. [qtile](/qtile) (window manager)
