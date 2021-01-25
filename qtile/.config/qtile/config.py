@@ -97,10 +97,19 @@ layouts = [
 ]
 
 
+colors = [["#282c34", "#282c34"], # panel background
+          ["#434758", "#434758"], # background for current screen tab
+          ["#ffffff", "#ffffff"], # font color for group names
+          ["#ff5555", "#ff5555"], # border line color for current tab
+          ["#8d62a9", "#8d62a9"], # border line color for other tab and odd widgets
+          ["#668bd7", "#668bd7"], # color for the even widgets
+          ["#e1acff", "#e1acff"]] # window name
+
+
 widget_defaults = dict(
-    font='sans',
     fontsize=12,
     padding=3,
+    background=colors[0],
 )
 
 
@@ -111,25 +120,57 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                # widget.CurrentLayout(),
-                widget.GroupBox(),
-                #widget.Prompt(),
-                widget.Spacer(),
+                widget.GroupBox(
+                    fontsize = 9, 
+                    margin_y = 3, 
+                    margin_x = 0,  
+                    padding_y = 5,   
+                    padding_x = 3, 
+                    borderwidth = 3,     
+                    active = colors[2],  
+                    inactive = colors[2],  
+                    rounded = False, 
+                    highlight_color = colors[1],  
+                    highlight_method = "line",   
+                    this_current_screen_border = colors[3], 
+                    this_screen_border = colors [4],  
+                    other_current_screen_border = colors[0],  
+                    other_screen_border = colors[0],        
+                    foreground = colors[2], 
+                    background = colors[0]
+                    ),
+                widget.Spacer(
+                    ),
                 widget.WindowName(
                         width=bar.CALCULATED,
                     ),
-                widget.Spacer(),
-                #widget.Chord(
-                #    chords_colors={
-                #        'launch': ("#242831", "#ffffff"),
-                #    },
-                #    name_transform=lambda name: name.upper(),
-                #),
-                # widget.TextBox("default config", name="default"),
-                # widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
-                widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
+                widget.Spacer(
+                    ),
+                widget.Volume(
+                    background=colors[4],  
+                    foreground=colors[2],
+                    ),
+                widget.CPU(
+                    format='CPU {freq_current}GHz {load_percent}%',
+                    background=colors[5],
+                    foreground=colors[2],
+                    ),
+                widget.Memory(
+                    background=colors[4],  
+                    foreground=colors[2],
+                    ),
+                widget.Net(
+                    interface="wlo1",
+                    background=colors[5],
+                    foreground=colors[2],
+                    format='{down} ↓↑ {up}',
+                    ), 
+                widget.Clock(
+                    format='%Y-%m-%d %a %I:%M %p',
+                    background=colors[4],
+                    foreground=colors[2],
+                    ),
                 widget.Systray(),
-                # widget.QuickExit(),
             ],
             24,
         ),
