@@ -77,7 +77,8 @@ for i, (name, kwargs) in enumerate(group_names, 1):
 
 layout_theme = {
     "border_width": 2,
-    "margin": 7,
+    "margin": 10,
+    "single_margin": 10,
     "border_focus": "#81a1c1",
     "border_normal": "3b4252",
 }
@@ -121,7 +122,7 @@ extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
-        top=bar.Bar(
+        bottom=bar.Bar(
             [
                 # Workspaces widget
                 widget.GroupBox(
