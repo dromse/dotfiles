@@ -3,6 +3,8 @@ set fish_greeting
 alias install "sudo pacman -S"
 alias update "sudo pacman -Syu"
 alias config_fish "nvim ~/.config/fish/config.fish"
+alias config_polybar "nvim ~/.config/polybar/config"
+alias config_awesome "nvim ~/.config/awesome/rc.lua"
 alias remove "sudo pacman -R"
 alias config_qtile "nvim ~/.config/qtile/config.py"
 alias config_nvim "nvim ~/.config/nvim/init.vim"
