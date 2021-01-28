@@ -185,6 +185,9 @@ exec_always picom --experimental-backends -f
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Gaps
+for_window [class="^.*"] border pixel 2
+gaps inner 30 
+gaps outer 15
 
 # Speed moving through text
 exec_always xset r rate 440 50 &
