@@ -164,11 +164,11 @@ new_window 1pixel
 exec_always picom --experimental-backends -f
 
 # Polybar Launch Script
-exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id ~/.config/polybar/launch.sh --shapes
 
 # Gaps
-for_window [class="^.*"] border pixel 2
-gaps inner 15
+for_window [class="^.*"] border pixel 3
+gaps inner 10
 gaps outer 10
 
 # Speed moving through text
@@ -192,3 +192,8 @@ bindsym Print exec spectacle
 
 # Start optimus manager
 exec_always optimus-manager-qt
+
+# Colors
+# Border colors
+client.focused #17022D #17022D #ffffff #6D0EAA #6D0EAA
+client.focused_inactive #00000000 #00000000 #00000000 #00000000 #00000000
