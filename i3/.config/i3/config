@@ -161,7 +161,7 @@ exec_always --no-startup-id setxkbmap -layout us,ru,ua -option 'grp:alt_shift_to
 exec_always feh --bg-scale ~/images/wallpaper.jpg &
 
 # Fibonacci layout
-exec_always --no-startup-id ~/alternating_layouts.py
+exec_always --no-startup-id ~/dotfiles/scripts/alternating_layouts.py
 
 # Start apps
 bindsym $mod+n exec firefox
