@@ -13,6 +13,11 @@ alias cpumax "sudo cpupower frequency-set --max"
 alias cpumin "sudo cpupower frequency-set --min"
 alias cpuinfo "cpupower frequency-info"
 
+# Rog strix laptop led alias
+alias led "sudo rogauracore"
+alias ledoff "sudo rogauracore black"
+alias ledcolor "sudo rogauracore single_static"
+
 # Text editor aliases
 alias v "nvim"
 alias suv "sudo nvim"
