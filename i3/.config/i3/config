@@ -155,7 +155,7 @@ exec_always xset r rate 500 50 &
 exec_always --no-startup-id setxkbmap -option caps:swapescape &
 
 # Change layouts
-exec_always --no-startup-id setxkbmap -layout us,ru,ua -option 'grp:alt_shift_toggle' &
+exec_always --no-startup-id setxkbmap -layout us,ru,ua -option 'grp:alt_shift_toggle'
 
 # Wallpaper
 exec_always feh --bg-scale ~/images/wallpaper.jpg &

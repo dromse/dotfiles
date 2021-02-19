@@ -40,5 +40,5 @@ alias c "clear"
 alias k "cd .."
 alias j "cd"
 alias r "ranger"
-
+alias ytmp3 "youtube-dl --extract-audio --audio-format mp3"
 
