@@ -12,6 +12,7 @@ alias aur "yay -S"
 alias cpumax "sudo cpupower frequency-set --max"
 alias cpumin "sudo cpupower frequency-set --min"
 alias cpuinfo "cpupower frequency-info"
+alias brightness "xrandr --output eDP-1 --brightness"
 
 # Rog strix laptop led alias
 alias led "sudo rogauracore"
