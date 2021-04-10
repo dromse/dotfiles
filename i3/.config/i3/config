@@ -141,7 +141,7 @@ new_window 1pixel
 exec_always picom --experimental-backends -f
 
 # Polybar Launch Script
-exec_always --no-startup-id ~/.config/polybar/launch.sh
+# exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Gaps
 for_window [class="^.*"] border pixel 3
@@ -149,26 +149,28 @@ gaps inner 10
 gaps outer 10
 
 # Speed moving through text
-exec_always xset r rate 500 50 &
+# exec_always xset r rate 500 50 &
 
 # Swap esc and caps
-exec_always --no-startup-id setxkbmap -option caps:swapescape &
+# exec_always --no-startup-id setxkbmap -option caps:swapescape &
 
 # Change layouts
-exec_always --no-startup-id setxkbmap -layout us,ru,ua -option 'grp:alt_shift_toggle'
+# exec_always --no-startup-id setxkbmap -layout us,ru,ua -option 'grp:alt_shift_toggle'
+exec_always --no-startup-id ~/.scripts/keyboard.sh
 
 # Wallpaper
-exec_always feh --bg-scale ~/images/wallpaper.jpg &
+# exec_always feh --bg-scale ~/images/wallpaper.jpg &
+exec_always --no-startup-id ~/.scripts/wallpaper.sh
 
 # Fibonacci layout
-exec_always --no-startup-id ~/dotfiles/scripts/alternating_layouts.py
+exec_always --no-startup-id ~/.scripts/alternating_layouts.py
 
 # Start apps
 bindsym $mod+n exec firefox
 bindsym Print exec spectacle 
 
 # Start optimus manager
-exec_always optimus-manager-qt
+# exec_always optimus-manager-qt
 
 # Colors
 # Border colors
