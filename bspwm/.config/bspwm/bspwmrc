@@ -1,10 +1,8 @@
 #! /bin/sh
 
 pgrep -x sxhkd > /dev/null || sxhkd &
-#$HOME/.config/polybar/launch.sh &
-~/.scripts/wallpaper.sh &
-~/.scripts/keyboard.sh &
-udiskie --no-automount --no-notify --tray &
+
+autorunning.sh
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 

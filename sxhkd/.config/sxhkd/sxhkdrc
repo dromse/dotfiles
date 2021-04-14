@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + d
-	dmenu_run
+	rofi -show run
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -124,3 +124,7 @@ super + {Left,Down,Up,Right}
 # hide
 super + alt + p
    polybar-msg cmd hide && bspc config top_padding 0 
+
+# lock screen
+alt + l
+    slock
