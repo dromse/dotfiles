@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/var/log/optimus-manager/switch'
+let g:netrw_dirhist_5='/var/log/optimus-manager/daemon'
+let g:netrw_dirhist_4='/etc/modules-load.d'
 let g:netrw_dirhist_3='/home/qasx/dotfiles/sxhkd/.config/sxhkd'
 let g:netrw_dirhist_2='/home/qasx/dotfiles/sxhkd/.config'
 let g:netrw_dirhist_1='/home/qasx/dotfiles/sxhkd'
@@ -7,6 +10,3 @@ let g:netrw_dirhist_0='/home/qasx/Documents/source_code/dwm'
 let g:netrw_dirhist_9='/home/qasx/Documents/source_code'
 let g:netrw_dirhist_8='/home/qasx/Documents'
 let g:netrw_dirhist_7='/home/qasx/dotfiles/sxhkd/.config/sxhkd'
-let g:netrw_dirhist_6='/home/qasx/dotfiles/sxhkd/.config'
-let g:netrw_dirhist_5='/home/qasx/.oh-my-zsh'
-let g:netrw_dirhist_4='/home/qasx/dotfiles'
