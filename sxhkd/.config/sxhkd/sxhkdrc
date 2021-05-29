@@ -1,9 +1,13 @@
-#
-# wm independent hotkeys
-#
-# internet browser
+########################################
+# START APPS
+#########################################
+# firefox
 alt + f
 	firefox
+
+# youtube 
+alt + y
+    firefox youtube.com
 
 # terminal emulator
 super + Return
@@ -13,19 +17,38 @@ super + Return
 super + d
 	rofi -show run
 
+# vscode
+alt + v
+    alacritty -e nvim
+
+# lock screen
+alt + l
+    slock
+
+# onlyoffice
+alt + o
+    onlyoffice-desktopeditors
+
+# telegram
+alt + t 
+    telegram-desktop
+
+# onlyoffice 
+alt + g
+    firefox github.com
+
+#########################################
+# BSPWM AND SXHKD KEYS
+#########################################
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
-
-#
-# bspwm hotkeys
-#
 
 # quit/restart bspwm
 super + alt + {q,r}
 	bspc {quit,wm -r}
 
-# close and kill
+# close window
 super + {_,shift + }w
 	bspc node -{c,k}
 
@@ -125,14 +148,10 @@ super + {Left,Down,Up,Right}
 
 # polybar 
 # hide
-super + alt + p
-   polybar-msg cmd hide && bspc config top_padding 0 
-
-# lock screen
-alt + l
-    slock
-
+# polybar-msg cmd hide && bspc config top_padding 0 
 #volume section
 XF86Audio{Raise,Lower}Volume
 	amixer -D pipewire sset Master {5%+,5%-}
 
+Print
+    spectacle
