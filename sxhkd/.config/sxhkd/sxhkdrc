@@ -1,6 +1,9 @@
 #
 # wm independent hotkeys
 #
+# internet browser
+alt + f
+	firefox
 
 # terminal emulator
 super + Return
@@ -128,3 +131,8 @@ super + alt + p
 # lock screen
 alt + l
     slock
+
+#volume section
+XF86Audio{Raise,Lower}Volume
+	amixer -D pipewire sset Master {5%+,5%-}
+

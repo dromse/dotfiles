@@ -18,8 +18,8 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #222
-background-alt = #444
+background = #0f0f0f
+background-alt = #DDD0f0f0f
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
 foreground-alt = #555
@@ -30,16 +30,16 @@ alert = #bd2c40
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 27
+height = 30
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 0
-fixed-center = false
+fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 3
+line-size = 0
 line-color = #f00
 
 border-size = 0
@@ -56,8 +56,9 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm
-modules-center = mpd
-modules-right = pulseaudio xkeyboard memory cpu wlan eth battery temperature date
+modules-center = date
+modules-right = pulseaudio wlan battery
+; pulseaudio xkeyboard wlan eth battery temperature
 
 tray-position = right
 tray-padding = 2
@@ -260,23 +261,17 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-date =
-date-alt = " %Y-%m-%d"
-
-time = %H:%M
-time-alt = %H:%M:%S
-
-format-prefix = 
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
+date = %a, %b %d 
+time = %l:%M %p
 
 label = %date% %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume = <label-volume> <bar-volume>
-label-volume = 🔊 %percentage%%
+format-volume = <label-volume> 
+;<bar-volume>
+label-volume = 🔊VOL: %percentage%%
 label-volume-foreground = ${root.foreground}
 
 label-muted = 🔇 muted
