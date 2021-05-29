@@ -37,6 +37,10 @@ alt + t
 alt + g
     firefox github.com
 
+# nemo
+alt + n
+    nemo
+
 #########################################
 # BSPWM AND SXHKD KEYS
 #########################################
