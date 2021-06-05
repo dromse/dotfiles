@@ -19,7 +19,7 @@ super + d
 
 # vscode
 alt + v
-    alacritty -e nvim
+    code
 
 # lock screen
 alt + l
@@ -40,6 +40,10 @@ alt + g
 # nemo
 alt + n
     nemo
+
+# pdf viewer
+alt + p
+    okular
 
 #########################################
 # BSPWM AND SXHKD KEYS
@@ -153,9 +157,16 @@ super + {Left,Down,Up,Right}
 # polybar 
 # hide
 # polybar-msg cmd hide && bspc config top_padding 0 
-#volume section
-XF86Audio{Raise,Lower}Volume
-	amixer -D pipewire sset Master {5%+,5%-}
 
+#volume
+XF86Audio{Raise,Lower}Volume
+	amixer set Master {5%+,5%-}
+
+# screenshots
 Print
     spectacle
+
+#brightness
+XF86MonBrightness{Up,Down}
+    brightnessctl s 10%{+,-}
+
