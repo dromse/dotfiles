@@ -57,7 +57,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm
 modules-center = date
-modules-right = pulseaudio wlan battery
+modules-right = alsa xkeyboard temperature battery wlan
 ; pulseaudio xkeyboard wlan eth battery temperature
 
 tray-position = right
@@ -297,8 +297,9 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 [module/alsa]
 type = internal/alsa
 
-format-volume = <label-volume> <bar-volume>
-label-volume = VOL
+format-volume = <label-volume> 
+;<bar-volume>
+label-volume = VOL: %percentage%%
 label-volume-foreground = ${root.foreground}
 
 format-muted-prefix = " "
