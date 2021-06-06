@@ -1,4 +1,0 @@
-#!/bin/sh
-
-exec ~/.scripts/wallpaper.sh &
-exec ~/.scripts/keyboard.sh &
