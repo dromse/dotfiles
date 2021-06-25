@@ -73,7 +73,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 new_window 1pixel
 
 # Gaps
-for_window [class="^.*"] border pixel 
+for_window [class="^.*"] border pixel 1
 gaps inner 10
 gaps outer 10
 
@@ -129,8 +129,8 @@ bindsym $mod+Return exec alacritty
 # CHANGE PARAMETERS
 ###########################################################################
 # Volume
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+ 
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%-
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
 bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
 
 # Brightness
@@ -186,4 +186,5 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
-
+#bindsym $mod+p move workspace to output right
+#force_xinerama yes
