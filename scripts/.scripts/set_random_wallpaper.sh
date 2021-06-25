@@ -7,7 +7,7 @@
 
 
 # set where it gets html
-LINK_TO_WEBSITE='https://wallhaven.cc/search?categories=110&purity=100&atleast=3840x2160&ratios=16x9&sorting=random&order=desc&colors=0066cc'
+LINK_TO_WEBSITE='https://wallhaven.cc/search?categories=110&purity=100&atleast=3840x2160&ratios=16x9&sorting=random&order=desc&colors=993399'
 
 # get html of random wallpapers page
 RANDOM_WALLPAPERS_HTML=$(curl $LINK_TO_WEBSITE)
@@ -29,3 +29,7 @@ AVARAGE_COLOR=$(magick convert $WALLPAPER -colors 1 -unique-colors txt: | grep -
 
 # set led keyboard
 sudo rogauracore single_static $AVARAGE_COLOR
+
+# set led mouse
+#sudo gled solid $AVARAGE_COLOR
+
